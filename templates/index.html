@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Happy Valentine's Day ❤️</title>
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+
+<div class="card">
+    <h1>Happy Valentine's Day ❤️</h1>
+
+    <div class="flowers">🌷 🌹 🌺 🌸 🌻</div>
+
+    <div class="letter">
+        <p><strong>My Baby lovesss Jo, 💕</strong></p>
+
+        <p>
+        Every day, I thank the world for giving me you. You are the reason my heart smiles even on my hardest days.
+        Your laugh is my favorite sound, your voice is my comfort, and your love is my greatest blessing.
+        </p>
+
+        <p>
+        You make my world brighter, my dreams bigger, and my life more meaningful.
+        With you, even the simplest moments become magical.
+        I promise to always choose you, support you, and love you with all my heart.
+        </p>
+
+        <p>
+        No matter where life takes us, remember that you will always have a home in my heart.
+        I love you more than words can ever explain, my Baby lovesss. 💗✨
+        </p>
+
+        <p class="signature">
+        Forever yours,<br>
+        <strong>TOTO Sheyn</strong>
+        </p>
+    </div>
+
+    <button onclick="showLove()">Click for Surprise 💝</button>
+    <p id="message"></p>
+</div>
+
+<script>
+function showLove() {
+    document.getElementById("message").innerHTML =
+        "You are my forever and always 💕🌸";
+}
+
+/* Floating Hearts */
+for(let i=0; i<35; i++){
+    let heart = document.createElement("div");
+    heart.className = "heart";
+    heart.innerHTML = "❤️";
+    heart.style.left = Math.random() * 100 + "vw";
+    heart.style.animationDuration = (4 + Math.random() * 6) + "s";
+    heart.style.fontSize = (12 + Math.random() * 22) + "px";
+    document.body.appendChild(heart);
+}
+</script>
+
+</body>
+</html>
