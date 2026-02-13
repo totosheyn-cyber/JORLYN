@@ -1,111 +1,120 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
 
 * {
-    box-sizing: border-box;
+  box-sizing: border-box;
 }
 
 body {
-    margin: 0;
-    font-family: 'Poppins', sans-serif;
-    background: linear-gradient(120deg, #ff9a9e, #fad0c4, #fbc2eb);
-    background-size: 300% 300%;
-    animation: gradientFlow 10s ease infinite;
-    min-height: 100vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    overflow: hidden;
+  margin: 0;
+  font-family: 'Poppins', sans-serif;
+  background: linear-gradient(120deg, #ff9a9e, #fad0c4, #fbc2eb);
+  background-size: 300% 300%;
+  animation: gradientFlow 10s ease infinite;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 15px;
+  overflow: hidden;
 }
 
 @keyframes gradientFlow {
-    0% { background-position: 0% 50%; }
-    50% { background-position: 100% 50%; }
-    100% { background-position: 0% 50%; }
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
 }
 
-/* Floating Hearts */
+/* Floating hearts */
 .heart {
-    position: absolute;
-    color: rgba(255,255,255,0.7);
-    animation: floatUp 6s linear infinite;
+  position: absolute;
+  color: rgba(255,255,255,0.75);
+  animation: floatUp 6s linear infinite;
 }
 
 @keyframes floatUp {
-    0% { transform: translateY(100vh) scale(0.8); opacity: 0; }
-    20% { opacity: 1; }
-    100% { transform: translateY(-10vh) scale(1.3); opacity: 0; }
+  0% { transform: translateY(100vh) scale(0.8); opacity: 0; }
+  20% { opacity: 1; }
+  100% { transform: translateY(-10vh) scale(1.3); opacity: 0; }
 }
 
-/* Glassmorphism Card */
+/* Glass Card */
 .card {
-    max-width: 520px;
-    padding: 40px;
-    border-radius: 25px;
-    background: rgba(255,255,255,0.18);
-    backdrop-filter: blur(18px);
-    -webkit-backdrop-filter: blur(18px);
-    border: 1px solid rgba(255,255,255,0.3);
-    box-shadow: 0 0 40px rgba(255,105,180,0.25);
-    text-align: center;
-    animation: fadeIn 1.5s ease;
+  width: 100%;
+  max-width: 520px;
+  padding: 25px 22px;
+  border-radius: 22px;
+  background: rgba(255,255,255,0.18);
+  backdrop-filter: blur(18px);
+  border: 1px solid rgba(255,255,255,0.3);
+  box-shadow: 0 0 35px rgba(255,105,180,0.3);
+  text-align: center;
+  animation: fadeIn 1.5s ease;
 }
 
 @keyframes fadeIn {
-    from { opacity: 0; transform: translateY(15px); }
-    to { opacity: 1; transform: translateY(0); }
+  from { opacity: 0; transform: translateY(15px); }
+  to { opacity: 1; transform: translateY(0); }
 }
 
 h1 {
-    color: #fff;
-    text-shadow: 0 0 15px rgba(255,255,255,0.8);
-    margin-bottom: 15px;
+  font-size: clamp(22px, 5vw, 32px);
+  color: #fff;
+  text-shadow: 0 0 15px rgba(255,255,255,0.8);
+  margin-bottom: 12px;
 }
 
 .flowers {
-    font-size: 36px;
-    animation: pulse 2s infinite alternate;
+  font-size: clamp(26px, 6vw, 38px);
+  animation: pulse 2s infinite alternate;
 }
 
 @keyframes pulse {
-    from { transform: scale(1); }
-    to { transform: scale(1.1); }
+  from { transform: scale(1); }
+  to { transform: scale(1.1); }
 }
 
 .letter {
-    margin-top: 20px;
-    color: #fff;
-    line-height: 1.7;
-    font-size: 15px;
-    text-shadow: 0 0 8px rgba(255,255,255,0.4);
+  margin-top: 15px;
+  color: #fff;
+  line-height: 1.7;
+  font-size: clamp(13px, 3.5vw, 15px);
+  text-shadow: 0 0 8px rgba(255,255,255,0.4);
 }
 
 .signature {
-    margin-top: 20px;
-    text-align: right;
-    font-style: italic;
+  margin-top: 15px;
+  text-align: right;
+  font-style: italic;
 }
 
 button {
-    margin-top: 20px;
-    background: linear-gradient(45deg, #ff4d6d, #ff85a1);
-    border: none;
-    padding: 12px 30px;
-    border-radius: 30px;
-    color: white;
-    font-size: 15px;
-    cursor: pointer;
-    box-shadow: 0 0 20px rgba(255,77,109,0.6);
-    transition: 0.3s;
+  margin-top: 18px;
+  background: linear-gradient(45deg, #ff4d6d, #ff85a1);
+  border: none;
+  padding: 12px 28px;
+  border-radius: 30px;
+  color: white;
+  font-size: 15px;
+  cursor: pointer;
+  box-shadow: 0 0 20px rgba(255,77,109,0.6);
+  transition: 0.3s;
 }
 
 button:hover {
-    transform: scale(1.05);
-    box-shadow: 0 0 30px rgba(255,77,109,0.9);
+  transform: scale(1.05);
+  box-shadow: 0 0 30px rgba(255,77,109,0.9);
 }
 
 #message {
-    margin-top: 15px;
-    color: #fff;
-    font-size: 16px;
-    text-shadow: 0 0 10px rgba(255,255,255,0.8);
+  margin-top: 12px;
+  color: #fff;
+  font-size: 16px;
+  text-shadow: 0 0 10px rgba(255,255,255,0.8);
+}
+
+/* Extra Mobile Optimization */
+@media (max-width: 480px) {
+  .card {
+    padding: 20px 18px;
+  }
 }
